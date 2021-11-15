@@ -32,7 +32,7 @@ var generateBtn = document.querySelector("#generate");
           //To ensure it includes a number if a number is selected, start with a random number.
           var randnum = Math.floor(Math.random() * numbers.length)
           password.push(numbers[randnum]);
-          console.log(password)
+      
           for (var i=0; i<numbers.length; i++)  {
             passwordPool.push(numbers[i])
           }
@@ -41,7 +41,7 @@ var generateBtn = document.querySelector("#generate");
           //To ensure it includes a lower if a lower is selected, start with a random number.
           var randlow = Math.floor(Math.random() * lowerLetters.length)
           password.push(lowerLetters[randlow]);
-          console.log(password)
+          
           for (var i=0; i<lowerLetters.length; i++)  {
             passwordPool.push(lowerLetters[i])
           }
@@ -50,7 +50,7 @@ var generateBtn = document.querySelector("#generate");
           //To ensure it includes a upper if a upper is selected, start with a random number.
           var randupp = Math.floor(Math.random() * upperLetters.length)
           password.push(upperLetters[randupp]);
-          console.log(password)
+          
           for (var i=0; i<upperLetters.length; i++)  {
             passwordPool.push(upperLetters[i])
           }
@@ -59,12 +59,11 @@ var generateBtn = document.querySelector("#generate");
           //To ensure it includes a special if a special is selected, start with a random number.
           var randspec = Math.floor(Math.random() * specialChars.length)
           password.push(specialChars[randspec]);
-          console.log(password)
+          
           for (var i=0; i<specialChars.length; i++)  {
             passwordPool.push(specialChars[i])
           }
         } 
-        console.log(passwordPool)
 
         //Start building the password by pulling randomly from the pool.
         for (var i=0; i< pwLength; i++) {
@@ -73,7 +72,7 @@ var generateBtn = document.querySelector("#generate");
         }
         //converts the array into a string without seperators
         return password.join("");
-        console.log(password)
+        
  }
 }
 
