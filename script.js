@@ -15,8 +15,10 @@ var generateBtn = document.querySelector("#generate");
   //Check for the length and ensure that its within range
   if (pwLength < 8){
     alert("Please enter a value greater than 8.");
+    return "";
  } else if (pwLength > 128) {
     alert("Please enter a value less than 128.");
+    return "";
  } else {
     var numbersPrompt = confirm("Does your password need numbers?");
     var lowerPrompt = confirm("Does your password need lowercase letters?");
@@ -26,7 +28,7 @@ var generateBtn = document.querySelector("#generate");
         // If at least one prompt is selected, start adding those chars to the pool of potential chars
         if (!numbersPrompt && !lowerPrompt && !upperPrompt && !specialPrompt){
           alert("Please select at least one character type");
-          return
+          return "";
         } 
         if (numbersPrompt) {
           //To ensure it includes a number if a number is selected, start with a random number.
